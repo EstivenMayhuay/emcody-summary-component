@@ -79,7 +79,6 @@ body {
     );
     padding: 4px;
     margin-bottom: 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .circleResult__num {
@@ -206,6 +205,17 @@ body {
     font-weight: 600;
     border: none;
     outline: none;
+    cursor: pointer;
+}
+
+.btnContinue:hover {
+    filter: brightness(1.1);
+    transition: filter 0.5s linear;
+}
+
+.btnContinue:active {
+    transform: scale(0.85);
+    transition: transform 0.5s linear;
 }
 
 @media  screen and (min-width: 768px) {
@@ -217,7 +227,7 @@ body {
     }
 
     .app {
-        width: 560px;
+        width: 640px;
         height: auto;
         margin: 0 auto;
         display: grid;
@@ -226,7 +236,27 @@ body {
         border-radius: 1.5rem;
     }
 
+    .circleResult {
+        --wCircle: 150px;
+
+        width: var(--wCircle);
+        height: var(--wCircle);
+    }
+
     .contentResult {
         border-radius: 1.5rem;
+    }
+
+    .contentItems {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .app {
+        width: 760px;
     }
 }
